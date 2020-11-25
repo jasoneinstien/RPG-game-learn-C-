@@ -13,17 +13,20 @@ string level1[5][5]
   {"-" , "-" , "-" , "-" , "-"},
 };
 
+
+
 void drawboard1();
 void clean();
-
+//main game loop
 int main()
 {
+//main charater 
   maincharacter a;
   a.apparence = 'A';
   a.blood =100;
   a.y = 3;
   a.x = 3;
-  int i = 5;
+
   while(true){
   
   level1[a.y][a.x] = a.apparence;
@@ -40,11 +43,14 @@ int main()
     level1[a.y][a.x] = " ";
     a.x--;
   }
+  int z = 0;
+  cin>>z;
 
+  //break loop
   if(a.y == 1 && a.x ==0){
     break;
   }
-
+  clean();
   
   }
 
