@@ -21,23 +21,28 @@ int main()
   maincharacter a;
   a.apparence = 'A';
   a.blood =100;
-  a.x = 1;
-  a.y = 0;
-  int i = 3;
-  while(i++){
-  level1[a.x][a.y] = a.apparence;
+  a.y = 3;
+  a.x = 3;
+  int i = 5;
+  while(i>0){
+  
+  level1[a.y][a.x] = a.apparence;
   drawboard1();
-  if(level1[a.x+1][a.y]  == "|" )
+
+  //if loop
+  if(level1[a.y-1][a.x] == " ")
   {
-    level1[a.x][a.y] = " ";
-    a.y += 1;
-    
-  }else
+    level1[a.y][a.x] = " ";
+    a.y--;
+  }
+  else if(level1[a.y][a.x-1] == " ")
   {
-    level1[a.x][a.y] = " ";
-    a.x += 1;
+    level1[a.y][a.x] = " ";
+    a.x--;
   }
 
+
+  i--;
   }
 
 }
