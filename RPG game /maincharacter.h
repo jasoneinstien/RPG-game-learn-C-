@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+void cleanmaincharacter();
 class maincharacter
 {
   public:
@@ -8,6 +11,27 @@ class maincharacter
   int y;
   int attack;
   int defense;
+  int exp;
 
   private:
 };
+
+void bag(char b)
+{
+
+    cleanmaincharacter();
+    cout<<"1.Sword"<<endl;
+    cout<<"2.Defence"<<endl;
+    cout<<"3.level"<<endl;
+    cout<<"if ok click ok"<<endl;
+    string a=0;
+    cin>>a;
+}
+
+
+void cleanmaincharacter()
+{
+  for(int i= 0 ; i<33;i++){
+    cout<<endl;
+  }
+}

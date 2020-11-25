@@ -28,10 +28,10 @@ int main()
   a.blood =100;
   a.y = 3;
   a.x = 3;
-  a.defense =10;
+  a.defense =11;
   a.attack = 3;
   lv1 lv1;
-  lv1.power = 10;
+  lv1.power = 70;
   lv1.blood = 10;
   lv1.defense =10;
   //main game loop
@@ -62,6 +62,8 @@ int main()
     {
       level1[a.y][a.x] = " ";
       a.x -=1 ;
+    }else if(z=='b'){
+      bag(z);
     }
 
     //into attack mode 
@@ -80,7 +82,15 @@ int main()
       clean();
       attackboard();
       char attackchoic ;
-      checkwin(a.blood, lv1.blood, a.attack, a.defense, lv1.defense, lv1.power, attackchoic);
+      checkwin(&a.blood,&lv1.blood, &a.attack, &a.defense, &lv1.defense, &lv1.power, attackchoic);
+      lv1.blood = 10;
+    }
+
+    if(a.blood <0)
+    {
+      clean();
+      cout<<"Game over";
+      break;
     }
   }
 

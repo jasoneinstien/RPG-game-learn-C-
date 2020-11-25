@@ -19,25 +19,25 @@ void attackboard()
   cout<<"1.attack"<<endl<<"2.defense"<<endl;
 }
 
- void checkwin(int hero , int villain , int heroattack,int herodefense , int villaindefense , int villainattack , char function)
+ void checkwin(int*hero , int*villain , int*heroattack,int*herodefense , int *villaindefense , int*villainattack , char function)
 {
-  while(hero>0 && villain >0 )
+  while(*hero>0 && *villain >0)
   {
     if(function == '1')
     {
-      villain =villain - heroattack;
+      *villain =*villain - *heroattack;
     }
-    else
+    else if(function == '2')
     {
-      hero += herodefense;
+      *hero += *herodefense;
     };
 
-    hero -= villainattack;
+    *hero -= *villainattack;
 
     cin>>function;
     cleanattack();
     attackboard();
-    cout<<hero<<"        "<<villain<<endl;
+    cout<<*hero<<"        "<<*villain<<endl;
   }
 }
 void cleanattack()
