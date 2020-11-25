@@ -1,10 +1,11 @@
 class maincharacter
 {
   public:
-  
-  int blood;
 
+  int blood;
   char apparence;
+  int x;
+  int y;
 
 
   private:
