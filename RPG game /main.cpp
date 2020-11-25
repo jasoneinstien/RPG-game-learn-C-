@@ -2,13 +2,15 @@
 #include "movement.h"
 #include "maincharacter.h"
 #include "story.h"
+#include "attack.h"
+#include "level1villain.h"
 using namespace std;
 
 string level1[5][5]
 {
   {"#" , "#" , "#" , "#" , "#"},
   {" " , " " , " " , " " , "#"},
-  {"#" , " " , " " , " " , "#"},  
+  {"#" , " " , " " , "1" , "#"},  
   {"#" , " " , " " , " " , "#"},
   {"#" , "#" , "#" , "#" , "#"},
 };
@@ -26,6 +28,10 @@ int main()
   a.blood =100;
   a.y = 3;
   a.x = 3;
+
+  lv1 lv1;
+  lv1.power = 10;
+  lv1.blood = 10;
 //main game loop
   while(true){
   
@@ -56,13 +62,24 @@ int main()
       a.x -=1 ;
     }
 
-    
+    //into attack mode 
+
     //break loop
     if(a.y == 1 && a.x ==0){
       break;
     }
     clean();
-  
+    
+    
+    //attackboard();
+
+    if(level1[a.y][a.x] == "1")
+    {
+      clean();
+      attackboard();
+      int attackchoic ;
+      cin>>attackchoic;
+    }
   }
 
 }
