@@ -1,4 +1,4 @@
-class lv1
+class Lv1
 {
   public:
     int blood;

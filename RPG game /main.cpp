@@ -9,7 +9,7 @@ using namespace std;
 string level1[5][5]
 {
   {"#" , "#" , "#" , "#" , "#"},
-  {" " , "1" , " " , " " , "#"},
+  {" " , "2" , " " , " " , "#"},
   {"#" , " " , " " , "1" , "#"},  
   {"#" , " " , " " , " " , "#"},
   {"#" , "#" , "#" , "#" , "#"},
@@ -30,10 +30,14 @@ int main()
   a.x = 3;
   a.defense =11;
   a.attack = 3;
-  lv1 lv1;
-  lv1.power = 70;
-  lv1.blood = 10;
+  Lv1 lv1;
+  lv1.power = 7;
+  lv1.blood = 40;
   lv1.defense =10;
+  Lv1 lv2;
+  lv2.power = 6;
+  lv2.blood = 100;
+  lv2.defense =10;
   //main game loop
   while(true){
   
@@ -83,6 +87,15 @@ int main()
       attackboard();
       char attackchoic ;
       checkwin(&a.blood,&lv1.blood, &a.attack, &a.defense, &lv1.defense, &lv1.power, attackchoic);
+      lv1.blood = 10;
+      a.attack = 16;
+    }
+    if(level1[a.y][a.x] == "2")
+    {
+      clean();
+      attackboard();
+      char attackchoic ;
+      checkwin(&a.blood,&lv2.blood, &a.attack, &a.defense, &lv2.defense, &lv2.power, attackchoic);
       lv1.blood = 10;
     }
 

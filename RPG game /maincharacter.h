@@ -12,6 +12,7 @@ class maincharacter
   int attack;
   int defense;
   int exp;
+  int level;
 
   private:
 };
