@@ -24,7 +24,7 @@ int main()
   a.y = 3;
   a.x = 3;
   int i = 5;
-  while(i>0){
+  while(true){
   
   level1[a.y][a.x] = a.apparence;
   drawboard1();
@@ -41,8 +41,11 @@ int main()
     a.x--;
   }
 
+  if(a.y == 1 && a.x ==0){
+    break;
+  }
 
-  i--;
+  
   }
 
 }
