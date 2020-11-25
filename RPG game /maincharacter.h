@@ -6,7 +6,8 @@ class maincharacter
   char apparence;
   int x;
   int y;
-
+  int attack;
+  int defense;
 
   private:
 };
