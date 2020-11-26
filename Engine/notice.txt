@@ -1,0 +1,1 @@
+So there is a Org class declared in map.h. Both Player class and villian class inherits from Org class

@@ -17,7 +17,7 @@ class maincharacter
   private:
 };
 
-void bag(char b)
+void bag()
 {
 
     cleanmaincharacter();
@@ -25,7 +25,7 @@ void bag(char b)
     cout<<"2.Defence"<<endl;
     cout<<"3.level"<<endl;
     cout<<"if ok click ok"<<endl;
-    string a=0;
+    string a= " ";
     cin>>a;
 }
 
@@ -36,3 +36,5 @@ void cleanmaincharacter()
     cout<<endl;
   }
 }
+
+

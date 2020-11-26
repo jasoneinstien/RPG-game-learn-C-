@@ -66,8 +66,9 @@ int main()
     {
       level1[a.y][a.x] = " ";
       a.x -=1 ;
-    }else if(z=='b'){
-      bag(z);
+    }
+    else if(z=='b'){
+      bag();
     }
 
     //into attack mode 
